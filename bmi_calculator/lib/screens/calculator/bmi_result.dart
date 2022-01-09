@@ -4,11 +4,11 @@ import 'package:syncfusion_flutter_gauges/gauges.dart';
 
 // BMI Result class
 class BMIResult extends StatefulWidget {
-  const BMIResult({Key? key, required this.bmi, required this.categoryValue})
+  const BMIResult({Key? key, required this.bmi, required this.categoryNumber})
       : super(key: key);
 
   final String bmi;
-  final int categoryValue;
+  final int categoryNumber;
 
   @override
   _BMIResultState createState() => _BMIResultState();
@@ -95,18 +95,18 @@ class _BMIResultState extends State<BMIResult> {
                       visualDensity: VisualDensity.compact,
                       value: 1,
                       activeColor: ConstantTerms.blue,
-                      groupValue: widget.categoryValue,
+                      groupValue: widget.categoryNumber,
                       onChanged: (value) {}),
                   Text('Underweight (severe thinness)',
                       style: TextStyle(
-                          color: widget.categoryValue == 1
+                          color: widget.categoryNumber == 1
                               ? ConstantTerms.blue
                               : Colors.black)),
                 ],
               ),
               Text('below 16.0',
                   style: TextStyle(
-                      color: widget.categoryValue == 1
+                      color: widget.categoryNumber == 1
                           ? ConstantTerms.blue
                           : Colors.black)),
             ],
@@ -119,19 +119,19 @@ class _BMIResultState extends State<BMIResult> {
                   Radio(
                       visualDensity: VisualDensity.compact,
                       value: 2,
-                      groupValue: widget.categoryValue,
+                      groupValue: widget.categoryNumber,
                       activeColor: ConstantTerms.blue,
                       onChanged: (value) {}),
                   Text('Underweight (moderate thinness)',
                       style: TextStyle(
-                          color: widget.categoryValue == 2
+                          color: widget.categoryNumber == 2
                               ? ConstantTerms.blue
                               : Colors.black)),
                 ],
               ),
               Text('16.0 - 16.9',
                   style: TextStyle(
-                      color: widget.categoryValue == 2
+                      color: widget.categoryNumber == 2
                           ? ConstantTerms.blue
                           : Colors.black)),
             ],
@@ -144,19 +144,19 @@ class _BMIResultState extends State<BMIResult> {
                   Radio(
                       visualDensity: VisualDensity.compact,
                       value: 3,
-                      groupValue: widget.categoryValue,
+                      groupValue: widget.categoryNumber,
                       activeColor: ConstantTerms.blue,
                       onChanged: (value) {}),
                   Text('Underweight (mild thinness)',
                       style: TextStyle(
-                          color: widget.categoryValue == 3
+                          color: widget.categoryNumber == 3
                               ? Theme.of(context).primaryColor
                               : Colors.black)),
                 ],
               ),
               Text('17.0 - 18. 4',
                   style: TextStyle(
-                      color: widget.categoryValue == 3
+                      color: widget.categoryNumber == 3
                           ? Theme.of(context).primaryColor
                           : Colors.black)),
             ],
@@ -169,19 +169,19 @@ class _BMIResultState extends State<BMIResult> {
                   Radio(
                       visualDensity: VisualDensity.compact,
                       value: 4,
-                      groupValue: widget.categoryValue,
+                      groupValue: widget.categoryNumber,
                       activeColor: ConstantTerms.green,
                       onChanged: (value) {}),
                   Text('Normal range',
                       style: TextStyle(
-                          color: widget.categoryValue == 4
+                          color: widget.categoryNumber == 4
                               ? ConstantTerms.green
                               : Colors.black)),
                 ],
               ),
               Text('18.5 - 24.9',
                   style: TextStyle(
-                      color: widget.categoryValue == 4
+                      color: widget.categoryNumber == 4
                           ? ConstantTerms.green
                           : Colors.black)),
             ],
@@ -194,19 +194,19 @@ class _BMIResultState extends State<BMIResult> {
                   Radio(
                       visualDensity: VisualDensity.compact,
                       value: 5,
-                      groupValue: widget.categoryValue,
+                      groupValue: widget.categoryNumber,
                       activeColor: ConstantTerms.orange,
                       onChanged: (value) {}),
                   Text('Overweight (pre-obese)',
                       style: TextStyle(
-                          color: widget.categoryValue == 5
+                          color: widget.categoryNumber == 5
                               ? ConstantTerms.orange
                               : Colors.black)),
                 ],
               ),
               Text('25.0 - 29.9',
                   style: TextStyle(
-                      color: widget.categoryValue == 5
+                      color: widget.categoryNumber == 5
                           ? ConstantTerms.orange
                           : Colors.black)),
             ],
@@ -219,19 +219,19 @@ class _BMIResultState extends State<BMIResult> {
                   Radio(
                       visualDensity: VisualDensity.compact,
                       value: 6,
-                      groupValue: widget.categoryValue,
+                      groupValue: widget.categoryNumber,
                       activeColor: ConstantTerms.red,
                       onChanged: (value) {}),
                   Text('Obese (class I)',
                       style: TextStyle(
-                          color: widget.categoryValue == 6
+                          color: widget.categoryNumber == 6
                               ? ConstantTerms.red
                               : Colors.black)),
                 ],
               ),
               Text('30.0 - 34.9',
                   style: TextStyle(
-                      color: widget.categoryValue == 6
+                      color: widget.categoryNumber == 6
                           ? ConstantTerms.red
                           : Colors.black)),
             ],
@@ -244,19 +244,19 @@ class _BMIResultState extends State<BMIResult> {
                   Radio(
                       visualDensity: VisualDensity.compact,
                       value: 7,
-                      groupValue: widget.categoryValue,
+                      groupValue: widget.categoryNumber,
                       activeColor: ConstantTerms.red,
                       onChanged: (value) {}),
                   Text('Obese (class II)',
                       style: TextStyle(
-                          color: widget.categoryValue == 7
+                          color: widget.categoryNumber == 7
                               ? ConstantTerms.red
                               : Colors.black)),
                 ],
               ),
               Text('35.0 - 39.9',
                   style: TextStyle(
-                      color: widget.categoryValue == 7
+                      color: widget.categoryNumber == 7
                           ? ConstantTerms.red
                           : Colors.black)),
             ],
@@ -269,19 +269,19 @@ class _BMIResultState extends State<BMIResult> {
                   Radio(
                       visualDensity: VisualDensity.compact,
                       value: 8,
-                      groupValue: widget.categoryValue,
+                      groupValue: widget.categoryNumber,
                       activeColor: ConstantTerms.red,
                       onChanged: (value) {}),
                   Text('Obese (class III)',
                       style: TextStyle(
-                          color: widget.categoryValue == 8
+                          color: widget.categoryNumber == 8
                               ? ConstantTerms.red
                               : Colors.black)),
                 ],
               ),
               Text('40.0 & above',
                   style: TextStyle(
-                      color: widget.categoryValue == 8
+                      color: widget.categoryNumber == 8
                           ? ConstantTerms.red
                           : Colors.black)),
             ],

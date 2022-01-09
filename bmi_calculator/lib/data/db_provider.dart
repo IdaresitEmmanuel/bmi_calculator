@@ -10,12 +10,13 @@ class DBProvider {
   final genderColumn = 'gender';
   final bmiColumn = 'bmi';
   final bmiPrimeColumn = 'bmi_prime';
+  final categoryNumberColumn = 'category_number';
   final categoryColumn = 'category';
 
   // bmi table
-  // id | date | age | gender | bmi | bmi_prime | category |
-  // 0    ''      ''    ''      ''      ''          ''
-  // 1    ''      ''    ''      ''      ''          ''
+  // id | date | age | gender | bmi | bmi_prime | category_number | category
+  // 0    ''      ''    ''      ''      ''          ''                ''
+  // 1    ''      ''    ''      ''      ''          ''                ''
 
   static final DBProvider instance = DBProvider._instance();
   Database? _db;
@@ -38,7 +39,7 @@ class DBProvider {
 
   Future _createDB(Database db, int version) async {
     db.execute(
-      'CREATE TABLE $tableName ($idColumn INTEGER PRIMARY KEY AUTOINCREMENT, $dateColumn TEXT, $ageColumn INTEGER, $genderColumn TEXT, $bmiColumn REAL, $bmiPrimeColumn REAL, $categoryColumn INTEGER)',
+      'CREATE TABLE $tableName ($idColumn INTEGER PRIMARY KEY AUTOINCREMENT, $dateColumn TEXT, $ageColumn INTEGER, $genderColumn TEXT, $bmiColumn REAL, $bmiPrimeColumn REAL, $categoryNumberColumn INTEGER, $categoryColumn TEXT)',
     );
   }
 

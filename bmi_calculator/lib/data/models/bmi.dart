@@ -5,7 +5,8 @@ class Bmi {
   final int age;
   final double bmi;
   final double bmiPrime;
-  final int category;
+  final int categoryNumber;
+  final String category;
 
   const Bmi({
     this.id,
@@ -14,6 +15,7 @@ class Bmi {
     required this.age,
     required this.bmi,
     required this.bmiPrime,
+    required this.categoryNumber,
     required this.category,
   });
 
@@ -25,6 +27,7 @@ class Bmi {
         age: map['age'],
         bmi: map['bmi'],
         bmiPrime: map['bmi_prime'],
+        categoryNumber: map['category_number'],
         category: map['category']);
   }
 
@@ -38,6 +41,7 @@ class Bmi {
     map['age'] = age;
     map['bmi'] = bmi;
     map['bmi_prime'] = bmiPrime;
+    map['category_number'] = categoryNumber;
     map['category'] = category;
 
     return map;
