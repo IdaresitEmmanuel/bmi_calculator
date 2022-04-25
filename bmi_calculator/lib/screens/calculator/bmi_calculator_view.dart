@@ -186,6 +186,7 @@ class _BMICalculatorState extends State<BMICalculator> {
                   } else if (!state.isValidHeight) {
                     return 'input correct value';
                   }
+                  return null;
                 },
                 controller: heightController,
                 keyboardType: const TextInputType.numberWithOptions(
@@ -261,6 +262,7 @@ class _BMICalculatorState extends State<BMICalculator> {
                   } else if (!state.isValidWeight) {
                     return 'input correct value';
                   }
+                  return null;
                 },
                 controller: weightController,
                 keyboardType: TextInputType.number,
@@ -325,6 +327,7 @@ class _BMICalculatorState extends State<BMICalculator> {
                 if (!state.isValidAge) {
                   return 'input correct value';
                 }
+                return null;
               },
               controller: ageController,
               keyboardType: TextInputType.number,
